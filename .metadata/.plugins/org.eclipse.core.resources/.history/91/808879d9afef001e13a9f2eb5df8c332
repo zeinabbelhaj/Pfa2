@@ -1,0 +1,46 @@
+package controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+import com.back.backpark.models.Parking;
+import com.back.backpark.repositories.ParkingRepository;
+import com.back.backpark.services.ParkingService;
+import java.util.List;
+
+@RestController
+@RequestMapping("/parkings")
+public class ParkingController {
+
+    @Autowired
+    private ParkingService parkingService;
+
+    @GetMapping
+    public List<Parking> getAllParkings() {
+        return parkingService.getAllParkings();
+    }
+
+    @GetMapping("/{id}")
+    public Parking getParkingById(@PathVariable String id) {
+        return parkingService.getParkingById(id);
+    }
+
+    @PostMapping
+    public Parking addParking(@RequestBody Parking parking) {
+        return parkingService.addParking(parking);
+    }
+
+    @PutMapping("/{id}")
+    public Parking updateParking(@PathVariable String id, @RequestBody Parking parking) {
+        return parkingService.updateParking(id, parking);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteParking(@PathVariable String id) {
+        parkingService.deleteParking(id);
+    }
+
+    @GetMapping("/available")
+    public List<Parking> getAvailableParkings() {
+        return parkingService.getAvailableParkings();
+    }
+}

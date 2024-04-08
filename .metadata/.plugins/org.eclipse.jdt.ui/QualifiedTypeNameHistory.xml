@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="models.Reservation"/>
+    <fullyQualifiedTypeName name="models.User"/>
+    <fullyQualifiedTypeName name="models.Parking"/>
+    <fullyQualifiedTypeName name="com.back.backpark.services.ParkingService"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+</qualifiedTypeNameHistroy>

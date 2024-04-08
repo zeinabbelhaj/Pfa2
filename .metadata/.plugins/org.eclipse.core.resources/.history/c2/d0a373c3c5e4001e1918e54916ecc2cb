@@ -1,0 +1,5 @@
+package com.back.backpark.repository;
+
+public interface ClientRepository {
+
+}
